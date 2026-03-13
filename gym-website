@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mahir's Fit Gym | Best Gym in Ahmedabad</title>
+
+<meta name="description" content="Join Mahir's Fit Gym in Ahmedabad for bodybuilding, weight loss, and personal training. Transform your body today.">
+
+<meta name="keywords" content="gym, fitness, bodybuilding, weight loss, workout, personal trainer">
+
+<meta name="author" content="Mahir's Fit Gym">
+
+<!-- Structured Data -->
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Gym",
+ "name": "PowerFit Gym",
+ "image": "https://images.unsplash.com/photo-1558611848-73f7eb4001a1",
+ "address": {
+ "@type": "PostalAddress",
+ "addressLocality": "Ahmedabad",
+ "addressCountry": "India"
+ },
+ "telephone": "+91-9999999999",
+ "url": "http://localhost/gym"
+}
+</script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+/* Header */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:black;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:rgba(0, 8, 255, 0.79);
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-size:18px;
+}
+
+nav a:hover{
+color:red;
+}
+
+/* Hero */
+
+.hero{
+height:90vh;
+background:url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f');
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:30px;
+}
+
+button{
+padding:15px 30px;
+font-size:18px;
+background:red;
+border:none;
+color:white;
+cursor:pointer;
+border-radius:5px;
+}
+
+/* Services */
+
+.services{
+padding:80px 20px;
+text-align:center;
+}
+
+.services h2{
+font-size:40px;
+margin-bottom:40px;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.card{
+background:#222;
+padding:30px;
+margin:15px;
+width:250px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+/* Contact */
+
+.contact{
+padding:60px;
+text-align:center;
+}
+
+form{
+max-width:400px;
+margin:auto;
+display:flex;
+flex-direction:column;
+}
+
+input, textarea{
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:5px;
+}
+
+/* Footer */
+
+footer{
+background:black;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Header -->
+
+<header>
+
+<div class="logo"> Mahir's Fit Gym</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+<h1>Transform Your Body</h1>
+
+<p>Best Gym in Ahmedabad for Fitness & Bodybuilding</p>
+
+<button onclick="scrollToContact()">Join Now</button>
+
+</section>
+
+<!-- Services -->
+
+<section id="services" class="services">
+
+<h2>Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Bodybuilding</h3>
+<p>Professional bodybuilding training with expert coaches.</p>
+</div>
+
+<div class="card">
+<h3>Weight Loss</h3>
+<p>Effective fat loss programs with diet plans.</p>
+</div>
+
+<div class="card">
+<h3>Personal Trainer</h3>
+<p>Get personal guidance from certified trainers.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact" class="contact">
+
+<h2>Contact Us</h2>
+
+<form onsubmit="submitForm(event)">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="email" id="email" placeholder="Your Email" required>
+
+<textarea id="message" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+<p id="result"></p>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+<p>© 2026 Mahir's Fit Gym | All Rights Reserved</p>
+
+</footer>
+
+<script>
+
+function scrollToContact(){
+document.getElementById("contact").scrollIntoView({
+behavior:"smooth"
+});
+}
+
+function submitForm(e){
+e.preventDefault();
+
+let name=document.getElementById("name").value;
+
+document.getElementById("result").innerHTML=
+"Thank you "+name+" for contacting Mahir's Fit Gym!";
+
+}
+
+</script>
+
+</body>
+</html>
